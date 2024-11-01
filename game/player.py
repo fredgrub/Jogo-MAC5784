@@ -10,26 +10,25 @@ class Player:
         self.selected_action = "harvest"  # Default action for right-click
         self.action_types = ["harvest", "cure"]
 
-    def plant_crop(self, tile):
-        if self.money >= 5 and not tile.crop:
+    def plant_crop(self, tile, plant_cost=5):
+        if self.money >= plant_cost and not tile.crop:
             crop = self.selected_crop_type(tile.sprite.center_x, tile.sprite.center_y)
             tile.crop = crop
-            self.money -= 5
+            self.money -= plant_cost
             return True
         else:
             return False
 
-    def harvest_crop(self, tile):
+    def harvest_crop(self, tile, harvested_crops=1, harvest_reward=10):
         if tile.crop and tile.crop.is_harvestable():
             tile.crop = None
-            self.harvested_crops += 1
-            self.money += 10
+            self.harvested_crops += harvested_crops
+            self.money += harvest_reward
             return True
         else:
             return False
 
-    def cure_crop(self, tile):
-        cure_cost = 5  # Cost to cure an infected crop
+    def cure_crop(self, tile, cure_cost=5):
         if tile.crop and tile.crop.infected:
             if self.money >= cure_cost:
                 tile.crop.infected = False
