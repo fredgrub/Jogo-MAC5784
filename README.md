@@ -1,5 +1,43 @@
 # Projeto da disciplina MAC5784
 
+## Instalação & Uso
+
+O jogo está sendo desenvolvido na versão 3.11.10 do Python e de desenvolvimento do Arcade. As dependências podem ser instaladas através do arquivo `requirements.txt` executando o comando:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+(Execute o comando acima preferencialmente em um ambiente virtual).
+
+O jogo pode ser executado, uma vez que o ambiente virtual esteja ativado, através do comando:
+
+```bash
+python game.py
+```
+
+## Terceira Entrega
+
+A terceira entrega do projeto adiciona diversos elementos visuais e modifica a dinâmica do jogo para permitir a implementação de agentes sociais. O jogo agora ocorre em tempo real, em vez de ser baseado em turnos. As culturas possuem pontos de vida (HP) e crescem em estágios que levam certo tempo para se completarem.
+
+O jogo inclui uma dinâmica de múltiplas pragas, cujo objetivo é consumir totalmente o HP das culturas. A quantidade de pragas que podem coexistir varia conforme o total de culturas consumidas. As pragas só podem se mover para culturas adjacentes do mesmo tipo de sua preferência. Caso não haja movimentos válidos, elas morrem. Quando uma cultura é completamente consumida, o solo se desgasta, tornando-se inutilizável.
+
+Quando as pragas estão em culturas vizinhas, elas cooperam entre si, aumentando seu poder de consumo. Essa dinâmica incorpora uma esfera social entre os agentes, conforme discutido em aula. Além disso, se o jogador adotar uma estratégia de policultura, as pragas não conseguem se espalhar, destacando a importância ecológica desse tipo de prática e alinhando-se aos Objetivos de Desenvolvimento Sustentável (ODS) de uma agricultura sustentável.
+
+O mecanismo de cura agora remove a praga da cultura atual. Quando não há pragas no jogo, elas podem reaparecer após um intervalo de tempo e se espalhar até o limite máximo permitido de pragas.
+
+Esta versão passou por mudanças drásticas, pois precisei trocar de computador, e o novo sistema operacional tinha problemas com a versão anterior do Arcade. Foi necessário atualizar para a versão de desenvolvimento, que já contava com a correção do erro, mas que trouxe modificações na interface de várias funções, o que quebrou o jogo anterior. Gastei um bom tempo resolvendo isso.
+
+A nova versão do Arcade está listada no arquivo `requirements.txt` e pode ser instalada da mesma forma. Certifique-se de estar usando a versão atualizada, pois o código não funciona na versão anterior.
+
+Não consegui incluir instruções completas de jogo nesta entrega, então aqui está um mini tutorial: Para plantar e colher, basta clicar com o botão esquerdo do mouse. Para curar, use o botão direito. Você pode alterar a cultura a ser plantada com as teclas 1 e 2. A barra de espaço exibe os detalhes das culturas e das pragas.
+
+As ilustrações utilizadas são livres de copyright e estão sob licensas permissivas. Todos os créditos vão para os ilustradores. Mais detalhes nos links abaixo:
+
+- Sprite da praga: https://opengameart.org/content/admurins-insect-items
+- Sprites do terreno: https://opengameart.org/content/lpc-farming-tilesets-magic-animations-and-ui-elements
+- Sprites das culturas: https://opengameart.org/content/lpc-crops
+
 ## Segunda Entrega
 
 Na segunda entrega, o projeto passou por mudanças drásticas que trouxeram melhorias significativas para o jogo. A experiência se tornou mais interativa e estratégica em comparação com a versão inicial. O jogo evoluiu de uma simulação básica para um simulador de fazenda mais complexo, onde o jogador assume o papel de fazendeiro com interações diretas no tabuleiro. Além disso, foi introduzido um mecanismo de fim de jogo: se o dinheiro do jogador acabar, o jogo termina. Essa mudança trouxe um objetivo claro ao jogador, aprimorando o design geral.
@@ -54,19 +92,3 @@ O projeto tem como objetivo desenvolver um jogo (prova de conceito) com agentes 
 ### Nova Proposta e Justificativa
 
 A complexidade de implementação de um jogo de construção de cidades motivou a busca por uma alternativa mais viável. A nova proposta é um jogo de agricultura baseado em turnos, onde o jogador controla indiretamente um agricultor que planta, colhe e cuida de sua plantação. Suas ações impactam o ambiente, podendo levar a problemas como esgotamento do solo, poluição da água e desastres naturais. Essa abordagem aborda os ODSs 2 (fome zero e agricultura sustentável), 6 (água potável e saneamento), 13 (ação contra a mudança global do clima) e 15 (vida terrestre). O agricultor, modelado como um agente inteligente, busca maximizar suas reservas de alimentos. Ele avalia as ações disponíveis (plantar, colher, mover) com base no benefício percebido para alcançar seu objetivo. Suas decisões são influenciadas pelo estado do ambiente (fertilidade do solo, recursos disponíveis) e seu conhecimento sobre esses fatores.
-
-# Instalação & Uso
-
-O jogo está sendo desenvolvido na versão 3.12.3 do Python e 2.6.17 do Arcade. As dependências podem ser instaladas através do arquivo `requirements.txt` executando o comando:
-
-```bash
-python -m pip install -r requirements.txt
-```
-
-(Execute o comando acima preferencialmente em um ambiente virtual).
-
-O jogo pode ser executado, uma vez que o ambiente virtual esteja ativado, através do comando:
-
-```bash
-python main.py
-```
