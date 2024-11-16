@@ -13,8 +13,25 @@ python -m pip install -r requirements.txt
 O jogo pode ser executado, uma vez que o ambiente virtual esteja ativado, através do comando:
 
 ```bash
-python game.py
+python main.py
 ```
+
+## Última Entrega
+
+Nesta entrega o foco foi melhorar a experiência geral do jogo, adicionando várias telas com botões interativos. Uma tela de história agora introduz o jogador ao universo do jogo, adicionando um elemento narrativo. O tabuleiro do jogo está centralizado na janela e há uma interface que auxilia o jogador com os comandos disponíveis. O código do jogo se tornou mais flexível, permitindo futuras extensões.
+
+As figuras a seguir mostram as telas implementadas:
+
+<div style="display: flex; justify-content: space-around;">
+   <img src="assets/menu.png" alt="Menu" style="width: 49%;">
+   <img src="assets/story.png" alt="História" style="width: 49%;">
+</div>
+<div style="display: flex; justify-content: space-around; margin-top: 10px;">
+   <img src="assets/game.png" alt="Jogo" style="width: 49%;">
+   <img src="assets/game_over.png" alt="Game Over" style="width: 49%;">
+</div>
+
+Além dessas mudanças, o código foi modularizado e organizado, corrigindo bugs e implementando melhorias de desempenho. O game over foi aprimorado e agora ocorre quando o jogador não tem mais dinheiro para plantar, não possui culturas para colher, não tem culturas em crescimento ou não há células disponíveis para plantar e não há culturas no campo.
 
 ## Terceira Entrega
 

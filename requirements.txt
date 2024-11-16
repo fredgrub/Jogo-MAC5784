@@ -1,9 +1,0 @@
-arcade @ https://github.com/pythonarcade/arcade/archive/refs/heads/development.zip#sha256=2acfeba1720650cc03fbf7e82adfa6a78ba40e39ca42a9170167c68feccc3e5f
-attrs==24.2.0
-cffi==1.17.1
-Pillow==9.3.0
-pycparser==2.22
-pyglet==2.1rc1
-pymunk==6.9.0
-pytiled-parser==2.2.0
-typing_extensions==4.12.2
