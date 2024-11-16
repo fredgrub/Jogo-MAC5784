@@ -1,0 +1,12 @@
+arcade @ https://github.com/pythonarcade/arcade/archive/refs/heads/development.zip#sha256=06dc9120d6c79bb8b6aa9d7e8867edb77798c881672196a7734b44944505fd7f
+attrs==24.2.0
+cffi==1.17.1
+iniconfig==2.0.0
+packaging==24.2
+pillow==11.0.0
+pluggy==1.5.0
+pycparser==2.22
+pyglet==2.1rc1
+pymunk==6.9.0
+pytiled_parser==2.2.7
+typing_extensions==4.12.2
